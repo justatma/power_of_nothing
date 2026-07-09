@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Power of Nothing</title>
+<style>
+  :root {
+    --room: #14161a;
+    --screen: #ece7dd;
+    --dim: #6f6a63;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--room);
+    background-image: radial-gradient(ellipse 70% 55% at 50% 42%, #1e2127 0%, #14161a 70%);
+    color: var(--screen);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100svh;
+    padding: 2rem;
+    text-align: center;
+  }
+  main {
+    animation: up 3.2s cubic-bezier(.2,.6,.2,1) both;
+  }
+  h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: clamp(1.05rem, 2.6vw, 1.6rem);
+    letter-spacing: 0.42em;
+    text-indent: 0.42em;
+    text-transform: lowercase;
+    line-height: 1.9;
+  }
+  .rule {
+    width: 1px;
+    height: 4.5rem;
+    margin: 3.5rem auto 0;
+    background: linear-gradient(to bottom, var(--dim), transparent);
+    opacity: .55;
+  }
+  footer {
+    position: absolute;
+    bottom: 2.25rem;
+    font-family: ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: .68rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--dim);
+    animation: up 3.2s 1.1s cubic-bezier(.2,.6,.2,1) both;
+  }
+  footer a {
+    color: var(--dim);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(111,106,99,.35);
+    padding-bottom: 2px;
+    transition: color .5s ease, border-color .5s ease;
+  }
+  footer a:hover, footer a:focus-visible {
+    color: var(--screen);
+    border-color: rgba(236,231,221,.6);
+  }
+  footer a:focus-visible { outline: 1px solid var(--screen); outline-offset: 6px; }
+  @keyframes up {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    main, footer { animation: none; }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <h1>the power of nothing</h1>
+    <div class="rule" aria-hidden="true"></div>
+  </main>
+  <footer>
+    Atma Degeyndt &nbsp;&middot;&nbsp; <a href="mailto:writer@atma.blog">writer@atma.blog</a>
+  </footer>
+</body>
+</html>
